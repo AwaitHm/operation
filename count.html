@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="main">
+			<button class="add">+</button>
+			<input  class="num" type="text" value="1" oninput="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" />
+			<button class="subtract">-</button>
+			<p>单价 ：<span class="price">100</span>￥</p>
+			<h2>总价：<span class="sum">100</span></h2>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/operation.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	    (function($){
+	    	$(".main").operations();
+	    })(jQuery);
+	</script>
+</html>
